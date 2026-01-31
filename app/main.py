@@ -6,6 +6,7 @@ API_KEY = os.getenv("API_KEY")
 CITY = "Paris"
 URL = "https://api.openweathermap.org/data/2.5/weather"
 
+
 def get_weather() -> None:
     if not API_KEY:
         raise RuntimeError("API_KEY environment variable is not set")
