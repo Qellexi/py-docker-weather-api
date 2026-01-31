@@ -2,7 +2,7 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY app/main.py app/main.py
+COPY app/main.py .
 
 RUN pip install --no-cache-dir requests
 
