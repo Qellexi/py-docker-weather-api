@@ -13,7 +13,7 @@ def get_weather() -> None:
 
     params = {
         "q": CITY,
-        "appid": API_KEY,
+        "key": API_KEY,
         "units": "metric"
     }
 
@@ -22,8 +22,8 @@ def get_weather() -> None:
 
     data = response.json()
 
-    temp = data["main"]["temp"]
-    description = data["weather"][0]["description"]
+    temp = data["current"]["temp_c"]
+    description = data["current"]["condition"]["text"]
 
     print(f"Current weather in {CITY}:")
     print(f"Temperature: {temp}°C")
